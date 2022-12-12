@@ -1,0 +1,44 @@
+@import "variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro&display=swap");
+
+
+// чуть переробити верстку
+// мейн не розширяється на висоту 100%
+.container {
+    width: 1314px;
+    display: flex;
+}
+.main {
+    height: 2420px;
+    .sidebar {
+        width: 200px;
+        .sidebar__sort {
+            cursor: pointer;
+            position: relative;
+            margin-bottom: 5px;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0px;
+                height: 1px;
+                width: 40%;
+                background-color: black;
+                transform: scale(0);
+                transition: 0.4s;
+                transform-origin: left;
+            }
+            &:hover:before {
+                transform: scale(1);
+            }
+        }
+    }
+    .cataloge__type {
+        overflow: 0;
+    }
+}
+
+.footer {
+    background-color: black;
+    height: 140px;
+}
